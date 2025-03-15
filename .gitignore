@@ -1,0 +1,21 @@
+# Ignore everything
+*
+
+# Allow this .gitignore file to be pushed
+!.gitignore
+
+# Allow specific folders and their contents
+!waybar/
+!waybar/**
+
+!swaync/
+!swaync/**
+
+!kitty/
+!kitty/**
+
+!hypr/
+!hypr/**
+
+!fish/
+!fish/**

@@ -1,0 +1,39 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### Minimal - Long ### //
+
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules"
+  ],
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 6,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 3,
+"margin-left": 8,
+"margin-right": 8,
+
+"modules-left": [ 
+	"hyprland/workspaces#kanji",
+	"mpris",
+	"group/notify"
+	],
+"modules-center": [
+	"clock"
+	],
+"modules-right": [
+	"custom/cava_mviz",
+	"custom/weather",
+	"group/audio",
+	"custom/power"
+	]
+}
