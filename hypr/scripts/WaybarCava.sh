@@ -21,7 +21,7 @@ cat >"$config_file" <<EOF
 # Older systems show significant CPU use with default framerate
 # Setting maximum framerate to 30  
 # You can increase the value if you wish
-framerate = 75
+framerate = 30
 bars = 10
 
 [input]
