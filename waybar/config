@@ -25,7 +25,7 @@
 "modules-left": [ 
 	"hyprland/workspaces#kanji",
 	"mpris",
-	"group/notify"
+	"custom/swaync"
 	],
 "modules-center": [
 	"clock"
