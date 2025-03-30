@@ -19,3 +19,6 @@
 
 !fish/
 !fish/**
+
+!neofetch/
+!neofetch/**
