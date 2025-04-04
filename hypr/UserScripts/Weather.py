@@ -30,7 +30,8 @@ def get_location():
     return float(loc[0]), float(loc[1])
   
 # Get latitude and longitude
-latitude, longitude = get_location()
+# latitude, longitude = get_location()
+latitude, longitude = ["23.7104", "90.4074"]
 
 # Open-Meteo API endpoint
 url = f"https://weather.com/en-PH/weather/today/l/{latitude},{longitude}"
@@ -86,7 +87,8 @@ temp_max = (
 temp_min_max = f"  {temp_min}\t\t  {temp_max}"
 
 # wind speed
-wind_speed = html_data("span[data-testid='Wind']").text().split("\n")[1]
+wind_raw = html_data("span[data-testid='Wind']").text().split("\n")
+wind_speed = wind_raw[1] if len(wind_raw) > 1 else "?"
 wind_text = f"  {wind_speed}"
 
 # humidity
