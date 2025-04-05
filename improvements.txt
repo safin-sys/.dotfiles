@@ -1,0 +1,2 @@
+1. xdg-desktop-portal-hyprland
+	* can't select options with keyboard :(
