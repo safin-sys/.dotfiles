@@ -221,6 +221,8 @@
 "custom/3pm_timer": {
     "exec": "~/.config/waybar/scripts/time_until_3pm.sh",
     "interval": 60,
-    "format": "{}"
+    "format": "{}",
+	"tooltip": true,
+	"tooltip-format": "{} until 3 PM"
 }
 }
