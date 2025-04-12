@@ -32,7 +32,7 @@
 	],
 "modules-right": [
 	"custom/cava_mviz",
-	"custom/weather",
+	"group/info",
 	"group/audio",
 	"custom/power"
 	]

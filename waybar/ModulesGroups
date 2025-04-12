@@ -136,4 +136,16 @@
         "custom/reboot"
       ]
 },
+"group/info": {
+	"orientation": "inherit",
+	"drawer": {
+		"transition-duration": 500,
+		"children-class": "weather-timer",
+		"transition-left-to-right": false
+        },
+	"modules": [
+		"custom/weather",
+		"custom/3pm_timer"
+	]
+}
 }

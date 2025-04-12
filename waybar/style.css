@@ -235,7 +235,7 @@ tooltip label {
   background: linear-gradient(45deg, #7aa2f7, #73daca, #bb9af7);  /* Gradient (blue, green, magenta) */
 }
 
-#custom-weather {
+#custom-weather, #custom-3pm_timer {
   color: #7dcfff;  /* Cyan */
   background: #0F1419;  /* Dark background */
   border-radius: 50px 50px;
