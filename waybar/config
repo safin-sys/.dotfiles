@@ -1,0 +1,25 @@
+{
+  "include": [
+    "$HOME/.config/waybar/modules"
+  ],
+  "layer": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 6,
+  "fixed-center": true,
+  "ipc": true,
+  "margin-top": 3,
+  "margin-left": 8,
+  "margin-right": 8,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "custom/cava_mviz",
+    "group/audio"
+  ]
+}

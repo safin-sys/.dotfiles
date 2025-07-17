@@ -1,0 +1,52 @@
+{
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "show-special": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    }
+  },
+  "clock": {
+    "interval": 60,
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%I:%M %p - %d %B, %A}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#7aa2f7'><b>{}</b></span>",
+        "days": "<span color='#73daca'><b>{}</b></span>",
+        "weeks": "<span color='#f7768e'><b>W{}</b></span>",
+        "weekdays": "<span color='#bb9af7'><b>{}</b></span>",
+        "today": "<span color='#e0af68'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "group/audio": {
+    "orientation": "inherit",
+    "modules": [
+      "pulseaudio"
+    ]
+  },
+  "custom/cava_mviz": {
+    "exec": "$HOME/.config/hypr/scripts/waybar-cava.sh",
+    "format": "{}"
+  }
+}

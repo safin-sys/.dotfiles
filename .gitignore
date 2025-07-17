@@ -1,0 +1,17 @@
+*
+
+!.gitignore
+
+!waybar/
+!waybar/**
+
+!kitty/
+!kitty/**
+
+!hypr/
+!hypr/**
+
+!fish/
+!fish/config.fish
+
+!starship.toml

@@ -1,0 +1,129 @@
+* {
+  font-family: "Monolisa", "FiraCode Nerd Font";
+  font-weight: bold;
+  min-height: 0;
+  font-size: 97%;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar {
+  background-color: rgba(26, 27, 38, 0);
+  border-bottom: 1px solid rgba(26, 27, 38, 0);
+  border-radius: 0px;
+  color: #bb9af7; /* Tokyo Night foreground color */
+}
+
+#waybar.empty,
+#waybar.tiled,
+#waybar.floating {
+  background-color: transparent;
+}
+
+window#waybar.empty,
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#taskbar,
+#workspaces {
+  background: #0f1419; /* Dark background */
+  margin: 5px;
+  padding: 0px 1px;
+  border-radius: 8px;
+  border: 0px;
+  font-style: normal;
+  color: #0f1419; /* Dark background for text */
+}
+
+#taskbar button,
+#workspaces button {
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 8px;
+  border: 0px;
+  color: #e6e1cf; /* Light gray text (foreground) */
+  background-color: #1a1b26; /* Dark background color (Tokyo Night background) */
+  opacity: 0.9; /* Slight opacity for better contrast */
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button.active,
+#workspaces button.active {
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 8px;
+  border: 0px;
+  color: #e6e1cf; /* Light gray text (foreground) */
+  background-color: #7aa2f7; /* Solid blue for active state */
+  opacity: 1;
+  min-width: 40px;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button:hover {
+  border-radius: 8px;
+  color: #e6e1cf; /* Light gray text */
+  background: #73daca; /* Solid green for hover effect */
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+@keyframes gradient_horizontal {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes swiping {
+  0% {
+    background-position: 0% 200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+tooltip {
+  background: #0f1419; /* Dark background */
+  border: 1px solid #bb9af7; /* Magenta border */
+  border-radius: 10px;
+}
+
+tooltip label {
+  color: #a9b1d6; /* Foreground color */
+}
+
+#window {
+  color: #a9b1d6; /* Light foreground */
+  background: #0f1419; /* Dark background */
+  border-radius: 50px 50px;
+  margin: 5px;
+  padding: 2px 15px;
+}
+
+.xc{
+  color: #73daca; /* Green color */
+  background: #0f1419; /* Dark background */
+  border-radius: 8px;
+  margin: 5px;
+  padding: 2px 15px;
+}
+
+#clock,
+#pulseaudio {
+  color: #7dcfff; /* Cyan */
+  background: #0f1419; /* Dark background */
+  border-radius: 8px;
+  margin: 5px;
+  padding: 2px 15px;
+}
+
+#custom-cava_mviz {
+  color: #7dcfff; /* Cyan */
+}
