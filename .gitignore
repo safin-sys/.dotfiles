@@ -14,4 +14,7 @@
 !fish/
 !fish/config.fish
 
+!rofi/
+!rofi/app.rasi
+
 !starship.toml
