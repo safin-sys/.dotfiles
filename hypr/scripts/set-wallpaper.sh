@@ -7,7 +7,7 @@ pkill rofi 2>/dev/null
 
 # Build cache if missing
 if [ ! -f "$CACHE" ]; then
-  find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" \) > "$CACHE"
+  find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" \) >"$CACHE"
 fi
 
 # Build rofi entries with icons
@@ -16,7 +16,7 @@ ROFI_INPUT="🎲 Random Wallpaper\0icon\x1fpreferences-desktop-wallpaper\n"
 while IFS= read -r img; do
   name="$(basename "$img")"
   ROFI_INPUT+="${name}\0icon\x1f${img}\n"
-done < "$CACHE"
+done <"$CACHE"
 
 # Rofi grid theme (inline)
 THEME='
@@ -62,13 +62,13 @@ TRANSITION=$(shuf -n 1 -e wipe outer center)
 
 if [ "$TRANSITION" = "wipe" ]; then
   ANGLE=$((RANDOM % 360))
-  swww img "$WALLPAPER" \
+  awww img "$WALLPAPER" \
     --transition-type wipe \
     --transition-angle "$ANGLE" \
     --transition-fps 165 \
     --transition-step 165
 else
-  swww img "$WALLPAPER" \
+  awww img "$WALLPAPER" \
     --transition-type "$TRANSITION" \
     --transition-fps 165 \
     --transition-step 165
