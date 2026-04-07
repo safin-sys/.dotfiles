@@ -9,6 +9,8 @@ if test -z "$DISPLAY" -a (tty) = "/dev/tty1"
     exec start-hyprland >/dev/null 2>&1
 end
 
+set PATH $HOME/.config/scripts $PATH
+
 # pnpm
 set -gx PNPM_HOME "/home/elliot/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
