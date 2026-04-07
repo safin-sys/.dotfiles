@@ -13,6 +13,8 @@
 
 !fish/
 !fish/config.fish
+!fish/functions/
+!fish/functions/fpv.fish
 
 !rofi/
 !rofi/app.rasi
