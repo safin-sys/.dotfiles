@@ -20,3 +20,6 @@
 !rofi/app.rasi
 
 !starship.toml
+
+!scripts/
+!scripts/**
