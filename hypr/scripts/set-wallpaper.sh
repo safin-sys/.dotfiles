@@ -5,6 +5,11 @@ CACHE="/tmp/wallpaper_cache"
 
 pkill rofi 2>/dev/null
 
+CURRENT_WP=$(awww query 2>/dev/null | sed -n 's/.*displaying: image:.*\/\(.*\)\.png/\1/p; s/.*displaying: image:.*\/\(.*\)\.jpg/\1/p')
+[ -z "$CURRENT_WP" ] && CURRENT_WP="Wallpaper"
+
+sed -i "s/placeholder:.*/placeholder:         \"$CURRENT_WP\";/" "$HOME/.config/rofi/wallpaper.rasi"
+
 # Build cache if missing
 if [ ! -f "$CACHE" ]; then
   find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" \) >"$CACHE"
@@ -18,34 +23,7 @@ while IFS= read -r img; do
   ROFI_INPUT+="${name}\0icon\x1f${img}\n"
 done <"$CACHE"
 
-# Rofi grid theme (inline)
-THEME='
-configuration {
-  show-icons: true;
-}
-
-listview {
-  columns: 5;
-  lines: 3;
-  fixed-height: true;
-}
-
-element {
-  orientation: vertical;
-  padding: 8px;
-}
-
-element-icon {
-  size: 100px;
-}
-
-element-text {
-  horizontal-align: 0.5;
-  vertical-align: 0.5;
-}
-'
-
-SELECTED=$(echo -e "$ROFI_INPUT" | rofi -dmenu -theme-str "$THEME" -p "Wallpaper")
+SELECTED=$(echo -e "$ROFI_INPUT" | rofi -dmenu -theme wallpaper -p "$CURRENT_WP")
 
 [ -z "$SELECTED" ] && exit 0
 
