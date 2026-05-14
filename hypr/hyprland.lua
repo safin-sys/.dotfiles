@@ -1,0 +1,6 @@
+require("autostart")
+require("envs")
+require("monitor")
+require("keybinds")
+require("look_and_feel")
+require("windowrules")
