@@ -68,10 +68,26 @@ hl.bind(mainMod .. " + ALT + down", hl.dsp.window.swap({
 }))
 
 -- Resize windows
--- hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({-50, 0}))
--- hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({50, 0}))
--- hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({0, -50}))
--- hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({0, 50}))
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({
+    x = -50,
+    y = 0,
+    relative = true
+}))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({
+    x = 50,
+    y = 0,
+    relative = true
+}))
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({
+    x = 0,
+    y = -50,
+    relative = true
+}))
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({
+    x = 0,
+    y = 50,
+    relative = true
+}))
 
 -- Workspaces
 for i = 1, 10 do
